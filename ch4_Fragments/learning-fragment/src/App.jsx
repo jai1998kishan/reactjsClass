@@ -6,7 +6,15 @@ import ErrorMessage from "./components/ErrorMessage";
 
 function App() {
   // let foodItems = [];
-  // let foodItems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
+  let foodItems = [
+    "Sabzi",
+    "Green Vegetable",
+    "Roti",
+    "Salad",
+    "Milk",
+    "Ghee",
+    "Fruits",
+  ];
 
   // let emptyMessage = foodItems.length === 0 ? <h3>I am Still Hungry</h3> : null;
 
@@ -14,8 +22,8 @@ function App() {
     <React.Fragment>
       <h1>Healthy Food</h1>
 
-      <ErrorMessage></ErrorMessage>
-      <FoodItems></FoodItems>
+      <ErrorMessage items={foodItems}></ErrorMessage>
+      <FoodItems items={foodItems}></FoodItems>
     </React.Fragment>
   );
 }
