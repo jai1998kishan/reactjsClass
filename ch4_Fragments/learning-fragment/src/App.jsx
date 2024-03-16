@@ -3,6 +3,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FoodItems from "./components/FoodItems";
 import ErrorMessage from "./components/ErrorMessage";
+import "./App.css";
 
 function App() {
   // let foodItems = [];
@@ -20,7 +21,7 @@ function App() {
 
   return (
     <React.Fragment>
-      <h1>Healthy Food</h1>
+      <h1 className="food-heading">Healthy Food</h1>
 
       <ErrorMessage items={foodItems}></ErrorMessage>
       <FoodItems items={foodItems}></FoodItems>
