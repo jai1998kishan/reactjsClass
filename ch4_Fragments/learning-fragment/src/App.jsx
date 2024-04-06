@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import FoodItems from "./components/FoodItems";
 import ErrorMessage from "./components/ErrorMessage";
 import "./App.css";
+import Container from "./components/Container";
 
 function App() {
   // let foodItems = [];
@@ -20,12 +21,20 @@ function App() {
   // let emptyMessage = foodItems.length === 0 ? <h3>I am Still Hungry</h3> : null;
 
   return (
-    <React.Fragment>
-      <h1 className="food-heading">Healthy Food</h1>
+    <>
+      <Container>
+        <h1 className="food-heading">Healthy Food</h1>
+        <ErrorMessage items={foodItems}></ErrorMessage>
+        <FoodItems items={foodItems}></FoodItems>
+      </Container>
 
-      <ErrorMessage items={foodItems}></ErrorMessage>
-      <FoodItems items={foodItems}></FoodItems>
-    </React.Fragment>
+      <Container>
+        <p>
+          Above is the lsit of healthy foods that are good for your health and
+          well being
+        </p>
+      </Container>
+    </>
   );
 }
 
